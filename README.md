@@ -23,9 +23,7 @@
       -Neural Networks
       </p>
     
-    <p>
      Our group shall proceed to analyze each of the 4 models we have chosen to see their effectiveness in predicting the price of Bitcoin. Since all 4 models are regression models, we will primarily be comparing the Explained Variance (R^2 value) and Mean Squared Error (MSE value) of the 4 models to decide which model makes the best prediction for the price of Bitcoin. However, there are notable differences in characteristics between the 4 models, which our group will address. These differences might explain certain behavior or predictions by the models. 
-    </p>
     
     
 
