@@ -6,5 +6,6 @@
     <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on bitcoin, inspired by the relatively new rise of blockchain technology. Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? </p>
     <img src = "Assets/Bitcoin.jpg" style = "width: 400px;">
 
-</section> 
-  
+<section> 
+  <h2> Analysis of Model Building </h2>
+</section>
