@@ -8,4 +8,11 @@
 
 <section> 
   <h2> Analysis of Model Building </h2>
-</section>
+  <section>
+    <p> The 4 types of models that we have decided to build are as follows:
+      -Multi-Variate Linear Regression
+      -Random Forest Regression
+      -K Nearest Neighbors Regression
+      -Neural Networks
+    </p>
+
