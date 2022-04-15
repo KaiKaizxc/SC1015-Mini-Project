@@ -9,7 +9,7 @@
 <section> 
   <h2> Analysis of Model Building </h2>
   <section>
-    <p> The 4 types of models that we have decided to build are as follows:
+    <p> The 4 types of Machine Learning models that we have decided to build are as follows:
       <p>
       -Multi-Variate Linear Regression
       </p>
