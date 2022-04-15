@@ -13,8 +13,14 @@
       <p>
       -Multi-Variate Linear Regression
       </p>
+      <p>
       -Random Forest Regression
+      </p>
+      <p>
       -K Nearest Neighbors Regression
+      </p>
+      <p>
       -Neural Networks
+      </p>
     </p>
 
