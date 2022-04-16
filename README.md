@@ -22,7 +22,7 @@
       <p>
       -Neural Networks
       </p>
-   Our group shall proceed to analyze each of the 4 models we have chosen to see their effectiveness in predicting the price of Bitcoin. In general, we will be looking at 4 metrics(if they are obtainable) for each of the models. These are namely: Mean Absolute Error(MAE), Mean Squared Error(MSE), Root Mean Square Error(RMSE), as well as the Explained Variance(R^2). However, there are notable differences in characteristics between the 4 models, which our group will address. These differences might explain certain behavior or predictions by the models.
+   Our group shall proceed to analyze each of the 4 models we have chosen to see their effectiveness in predicting the price of Bitcoin. In general, we will be looking at 4 metrics(where applicable) for each of the models. These are namely: Mean Absolute Error(MAE), Mean Squared Error(MSE), Root Mean Square Error(RMSE), as well as the Explained Variance(R^2). However, there are notable differences in characteristics between the 4 models, which our group will address. These differences might explain certain behavior or predictions by the models.
     <h3> Machine Learning: Multi-Variate Linear Regression </h3>
     <p> Linear Regression is a method of "finding the best fit linear line between the independent and dependent variable:. It "fits the model with coefficients to minimze the residual sum of squares" between the set of variables. Linear Regression models are extremely common in various Machine Learning applications as they are easy to implement and interpret. As such, our group chose this model to allow us to obtain a baseline of what to expect from our other model choices. </p>
     <p> Bitcoin mining has many parameters associated with it. Our group believes that a myriad of factors regarding mining can affect the price of Bitcoin. As such, we decided to attempt multi-variate Linear Regression in hopes of obtaining a more accurate prediction model for the pricing of Bitcoin. </p>
@@ -73,5 +73,5 @@
     print()
     ```
     
-   asdasd
+   <p> The independent variables we chose were Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses, and Daily Hash Rate, measured in trillions of hashes per second. Of course, our dependent variable was price of Bitcoin. From our Linear Regression Model, we obtained an R^2 of 0.760 on our train data set, and 0.752 on our test data set, while MSE value was 2864396 on the train data set and 2796655 on our test data set. Solely based off these numbers, we see that our model has a rather high accuracy, with about 75% of all the actual data being predicted by our model is correct. For the MSE values, since there are no values for us to compare against yet, we will use these values later on once we have built our other models. In general however, a smaller MSE value would indicate that the model is more accurate. The results obtained from this Multi-Variate Linear Regression will be used as a baseline for what to expect for our 3 remaining unbuilt models.</p>
     
