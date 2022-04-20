@@ -81,3 +81,41 @@
     <p> Random Forest is a "meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting". Interestingly, our group found during our research, that Random Forest models, although typically used to perform classification, can also double as a regression model. As such, we decided to try it out, to see if it produces a better model than our Linear Regression model. </p>
     <p> The process of Random Forest is as follows: Out of all the rows within the dataset, the same number of them will be selected at random, with repetition being allowed. This becomes the 'Train' data. Then, out of the columns that contain the independent variables Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses, and Daily Hash Rate, a number of columns will be randomly selected, which allows for the splitting at each parent node. This process is known as bootstrapping, and it is repeated multiple times to create multiple smaller trees, each tree with a different set of 'Train' data and variables chosen for regression. The price predicted by the model is an average of all the various predictions created by the smaller trees.</p>
     <p> Random Forest Regression is effective because it combines the simplicity of a decision tree with flexibility in the multiple repetitions, creating a more accurate model. Our code allowed the scikit-learn algorithm to determine the number of trees it would create, as well as the number of independent variables sampled for each decision tree created. However, fine tuning can be done to have control over all these randomized aspects, which can help to prevent issues like overfitting, helping to bring up the accuracy of the model even further.</p>
+    <p> Here is our code for the Random Forest Regression:</p>
+    
+    ```
+    from sklearn.tree import DecisionTreeRegressor
+    from sklearn.ensemble import RandomForestRegressor
+    
+    tree_model = DecisionTreeRegressor()
+    rf_model = RandomForestRegressor()
+    
+    tree_model.fit(train_scaled, y_train)
+    rf_model.fit(train_scaled, y_train)
+    
+    from sklearn.metrics import mean_squared_error
+    from sklearn.metrics import mean_absolute_error
+    from math import sqrt
+    
+    tree_mse = mean_squared_error(y_train, tree_model.predict(train_scaled))
+    tree_mae = mean_absolute_error(y_train, tree_model.predict(train_scaled))
+    
+    rf_mse = mean_squared_error(y_train, rf_model.predict(train_scaled))
+    rf_mae = mean_absolute_error(y_train, rf_model.predict(train_scaled))
+
+    print("Decision Tree training mse = ",tree_mse," & mae = ",tree_mae," & rmse = ", sqrt(tree_mse))
+    print("Random Forest training mse = ",rf_mse," & mae = ",rf_mae," & rmse = ", sqrt(rf_mse))
+    
+    tree_test_mse = mean_squared_error(y_test, tree_model.predict(test_scaled))
+    tree_test_mae = mean_absolute_error(y_test, tree_model.predict(test_scaled))
+    
+    rf_test_mse = mean_squared_error(y_test, rf_model.predict(test_scaled))
+    rf_test_mae = mean_absolute_error(y_test, rf_model.predict(test_scaled))
+    
+    print("Decision Tree test mse = ",tree_test_mse," & mae = ",tree_test_mae," & rmse = ", sqrt(tree_test_mse))
+    print("Random Forest test mse = ",rf_test_mse," & mae = ",rf_test_mae," & rmse = ", sqrt(rf_test_mse))
+    ```
+    
+    <p>Our group included code for if a singular Decision Tree was used for regression only as a comparison to the Random Forest model. Out of the multiple times that we ran the model, RMSE, MSE and MAE values were all generally lower in the Random Forest model, showing that the Random Forest process does help improve the accuracy of the model.</p>
+    <h3>Machine Learning:K Nearest Neighbors</h3>
+    
