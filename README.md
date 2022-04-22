@@ -4,11 +4,15 @@
   <h2> DSAI Data Science and Aritificial Intelligence Project </h2>
   <section>
    <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on Bitcoin, inspired by the relatively new rise of blockchain technology. There is a general notion that investment in Bitcoin is a high risk affair, due to the volatile nature of cryptocurrency, as well as the fact that it is 'not backed by anything', unlike most currencies. Our group finds the world of mining to be a truly fascinating one. </p>
-      
-      
-      
-   <p> With the recent boom in mining activity over the course of the pandemic, we could not help but wonder: how does mining activity affect Bitcoin pricing? Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? </p>
-    <img src = "Assets/Bitcoin.jpg" style = "width: 400px;"/>
+   <img src = "Assets/Bitcoin.jpg" style = "width: 400px;"/>
+   
+   <h3>Problem Statement</h3>
+   <p> With the recent boom in mining activity over the course of the pandemic, we could not help but wonder: how does mining activity affect Bitcoin pricing? Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? 
+    <b>For simplicity sake, we will assume bitcoin’s price is reflective of its state in the future.</b>
+  
+   </p>
+    <h3>Bitcoin's price over the years</h3>
+    <img src = "MatplotLibGraphs/PriceYears.png" style = "width: 1000px;"/>
     
     
     
