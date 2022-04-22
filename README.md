@@ -6,21 +6,7 @@
     <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on Bitcoin, inspired by the relatively new rise of blockchain technology. There is a general notion that investment in Bitcoin is a high risk affair, due to the volatile nature of cryptocurrency, as well as the fact that it is 'not backed by anything', unlike most currencies. Our group finds the world of mining to be a truly fascinating one. With the recent boom in mining activity over the course of the pandemic, we could not help but wonder: how does mining activity affect Bitcoin pricing? Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? </p>
     <img src = "Assets/Bitcoin.jpg" style = "width: 400px;"/>
     
-    <div>
-      <p>
-        First let's sift through the data, gather relevant info and remove null values. Consider important datasets and clean the data.
-      </p>
       
-      <p>
-        We have bitcoin's data general data, i.e: price, transaction volume , block size, etc.... Also, we included another dataset which represent's bitcoin's hashrate. 
-      </p>
-      
-      
-      
-      
-    </div>
-      
-     
     
     
 
