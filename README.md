@@ -14,14 +14,19 @@
     <h3>Bitcoin's price over the years</h3>
     <img src = "MatplotLibGraphs/PriceYears.png" style = "width: 1000px;"/>
     
-    
-    
-      
-    
+   
     
   </section>
   
 </section>
+
+<section>
+  <h2>Exploratory Data Analysis</h2>
+  
+
+
+
+
 <section> 
   <h2> Analysis of Model Building </h2>
   <section>
