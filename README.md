@@ -3,8 +3,12 @@
 <section>
   <h2> DSAI Data Science and Aritificial Intelligence Project </h2>
   <section>
-    <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on bitcoin, inspired by the relatively new rise of blockchain technology. Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? </p>
-    <img src = "Assets/Bitcoin.jpg" style = "width: 400px;">
+    <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on Bitcoin, inspired by the relatively new rise of blockchain technology. There is a general notion that investment in Bitcoin is a high risk affair, due to the volatile nature of cryptocurrency, as well as the fact that it is 'not backed by anything', unlike most currencies. Our group finds the world of mining to be a truly fascinating one. With the recent boom in mining activity over the course of the pandemic, we could not help but wonder: how does mining activity affect Bitcoin pricing? Is bitcoin actually an asset class worth considering? Or is it just an asset whose price is driven by tweets and memes and influencers? </p>
+    <img src = "Assets/Bitcoin.jpg" style = "width: 400px;"/>
+    
+      
+    
+    
 
 <section> 
   <h2> Analysis of Model Building </h2>
@@ -74,7 +78,7 @@
     ```
     
    <p> The independent variables we chose were Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses, and Daily Hash Rate, measured in trillions of hashes per second. Of course, our dependent variable was price of Bitcoin. </p>
-    <p> Based on our model, we obtained the various coefficients of regression: 1.23x10^-10, -1.32x10^-3, 1.36x10^-2 and 1.53x10^-4, for Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses and Daily Hash Rate respectively. Out of the 4 variables, the highest coefficient of regression belonged to Number of Active Addresses, which tells us that it had the biggest impact on the price of Bitcoin. This piece of information will help us in our analysis for all subsequent model building.</p>
+    <p> Based on our model, we obtained the various coefficients of regression: 1.23x10^-10, -1.32x10^-3, 1.36x10^-2 and 1.53x10^-4, for Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses and Daily Hash Rate respectively. TO COMPLETE</p>
     <p>From our Linear Regression Model, we obtained an R^2 of 0.760 on our train data set, and 0.752 on our test data set, while MSE value was 2864396 on the train data set and 2796655 on our test data set. Solely based off these numbers, we see that our model has a rather high accuracy, with about 75% of all the actual data being predicted by our model is correct.</p>
     <p>For the MSE values, since there are no values for us to compare against yet, we will use these values later on once we have built our other models. In general however, a smaller MSE value would indicate that the model is more accurate. The results obtained from this Multi-Variate Linear Regression will be used as a baseline for what to expect for our 3 remaining unbuilt models.</p>
     <h3>Machine Learning:Random Forest Regression</h3>
@@ -118,4 +122,4 @@
 
    <p>Our group included code for if a singular Decision Tree was used for regression only as a comparison to the Random Forest model. Out of the multiple times that we ran the model, RMSE, MSE and MAE values were all generally lower in the Random Forest model, showing that the Random Forest process does help improve the accuracy of the model.</p>
     <h3>Machine Learning:K Nearest Neighbors</h3>
-    
+    <p>
