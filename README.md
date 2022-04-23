@@ -103,6 +103,10 @@
   </ol>
   </nav>
   
+  <h3>Relationship between all of the variables</h3>
+  <p>Looking at all of the variables of the bitcoin data excluding hashrate in the first dataset:</p>
+  <img>
+  
   
   
 
