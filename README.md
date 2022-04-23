@@ -94,6 +94,16 @@
 <!--   =============================== EXPLORATORY DATA ANALYSIS HERE ======================================= -->
   <h2 id = "Exploratory-Data-Analysis">Exploratory Data Analysis</h2>
   
+  <p>Exploratory Data Analysis will be split into the following:</p>
+  <nav>
+  <ol>
+    <li><a href = "#Gathering-Data">Relationship between all of the variables.</a></li>
+    <li><a href = "#Exploratory-Data-Analysis">Narrowing down relevant data</a></li>
+
+  </ol>
+  </nav>
+  
+  
   
 
 
