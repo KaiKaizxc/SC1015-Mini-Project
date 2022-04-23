@@ -185,6 +185,7 @@ The following have little to no correlation, or weaker correlation in general:
 <section>
   <h2 id = "Data-Cleaning">Data Cleaning</h2>
   <p>Inspecting the hashrate data, it appears that the number of rows in our hashrate dataset and bitcoin data dataset do not match. We first have to ensure the dates match for reliable data</p>
+  <p> It appears that there are some missing dates and data. The number of rows of data under bitcoin hashrate is lesser than that of the filtered Bitcoin data. Hence, we have to remove the extra or fill in the missing dates. Here, we opt to delete the missing data since we are unclear of how the relationship is like before injecting artificial data</p>
   <h3>Number of rows of bitcoin general data</h3>
   <img src = "Data_Cleaning_Assets/bitcoin_general_data_length.JPG"></img>
   <h3>Number of rows of bitcoin hash rate data</h3>
