@@ -174,6 +174,18 @@ The following have little to no correlation, or weaker correlation in general:
     <b>Now, let's move onto data cleaning!</b>
 </p>
 
+</section>
+
+
+
+
+<!-- =================================================== DATA CLEANING STARTS HERE ====================================================================== -->
+
+
+<section>
+  <h2 id = "Data-Cleaning">Data Cleaning</h2>
+  <p>Inspecting the 
+
 <section> 
   <h2> Analysis of Model Building </h2>
   <section>
