@@ -105,8 +105,22 @@
   
   <h3>Relationship between all of the variables</h3>
   <p>Looking at all of the variables of the bitcoin data excluding hashrate in the first dataset:</p>
-  <img>
+  <img src = "EDA_Assets/all_variables.JPG"></img>
   
+  <p>Given the myriad factors possible related to bitcoin, we are interested in factors which will affect its price, the factors which the price of bitcoin is dependent upon, not the factors which depend on the price of bitcoin. </p>
+  
+ <p>
+    Let's observe the trend of bitcoin over time. Here, we are using:
+    <ul>
+        <li>Price per Bitcoin</li>
+        <li>Active Addresses</li>
+    </ul>
+</p>
+
+<p>
+We have chosen these variables because these factors strongly reflect the sentiment of investors to Bitcoin intuitively
+</p>
+<h3>Bitcoin's price over the years</h3>
   
   
 
