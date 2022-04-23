@@ -28,7 +28,8 @@
     <nav>
     <ul>
       <a href = ""><li>Gathering Data</li></a>
-      <a href = "Exploratory-Data-Analysis"><li>Exploratory Data Analysis</li></a>
+      <a href = "#Exploratory-Data-Analysis"><li>Exploratory Data Analysis</li></a>
+      <a href = "#Data-Cleaning"><li>Data Cleaning</li></a>
     </nav>
   </section>
   
