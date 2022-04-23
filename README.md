@@ -23,15 +23,70 @@
   <h3>Transacting Bitcoin</h3>
   <p>Cryptocurrency assets like Bitcoin are stored in wallets, cold or hot. A cold wallet simply means an offline hardware wallet, while a hot wallet means that it is online like exchange platforms, possible to be hacked though the likelihood is very little. Someone with another wallet address will send the Bitcoin to your unique wallet address, ie: MetaMask, phamtom wallet, etc. Then, a small transaction fee is paid to miners for validating the Bitcoin network.  </p>
     
+    
+  <h3>Jargons used later</h3>
+  <table>
+  <tr>
+      <th>blockCount</th>
+      <td>A factor which measures the number of transactions or (blocks) in the blockchain</td>
+  </tr>
+  <tr>
+      <th>blockSize</th>
+      <td>A factor which measures how many transactions a block can store, the size of the block, which affects its scalability</td>
+  </tr>
+  <tr>
+      <th>averageDifficulty</th>
+      <td>How much reward in bitcoin is paid to the miners. </td>
+  </tr>
+  <tr>
+      <th>Hashrate</th>
+      <td>The computational power that the bitcoin network currently has (provided by the miners) to solve nounces to earn Bitcoin rewards</td>
+  </tr>
+  <tr>
+      <th>Active Addresses</th>
+      <td>The number of wallets containing bitcoin</td>
+  </tr>
+  <tr>
+      <th>Cumulative coins</th>
+      <td>The total number of Bitcoins</td>
+  </tr>
+
+  </table>
+    
   <h2>Contents</h2>
     <p>Our project will be split into different segments:</p>
     <nav>
-    <ul>
-      <a href = ""><li>Gathering Data</li></a>
-      <a href = "#Exploratory-Data-Analysis"><li>Exploratory Data Analysis</li></a>
-      <a href = "#Data-Cleaning"><li>Data Cleaning</li></a>
+    <ol>
+      <li><a href = "#Gathering-Data">Gathering Data</a></li>
+      <li><a href = "#Exploratory-Data-Analysis">Exploratory Data Analysis</a></li>
+      <li><a href = "#Data-Cleaning">Data Cleaning</a></li>
+    </ol>
     </nav>
   </section>
+  
+</section>
+
+<!--   =============================== DATA GATHERING HERE ======================================= -->
+<section>
+  <h2 id = "Gathering-Data">Data Gathering</h2>
+  <p>In order to see if Bitcoin is backed or affected by any variable at all, we need to gather some information relevant to Bitcoin, as well its hashrate data. Unfortunately, the datasets we are after are separate, and needed to be combined together. This will be done in under "Data Cleaning".</p>
+  
+  <p>Bitcoin general data taken from:</p>
+  <nav>
+    <ul>
+      <li><a href = "">*insert link here*</a></li>
+    </ul>
+  </nav>
+  
+  <p>Bitcoin hash rate data taken from:</p>
+  <nav>
+    <ul>
+      <li><a href = "">*insert link here*</a></li>
+    </ul>
+  </nav>
+  
+  
+  
   
 </section>
 
