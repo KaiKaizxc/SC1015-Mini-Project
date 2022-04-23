@@ -184,8 +184,46 @@ The following have little to no correlation, or weaker correlation in general:
 
 <section>
   <h2 id = "Data-Cleaning">Data Cleaning</h2>
-  <p>Inspecting the 
+  <p>Inspecting the hashrate data, it appears that the number of rows in our hashrate dataset and bitcoin data dataset do not match. We first have to ensure the dates match for reliable data</p>
+  <h3>Number of rows of bitcoin general data</h3>
+  <img src = "Data_Cleaning_Assets/bitcoin_general_data_length.JPG"></img>
+  <h3>Number of rows of bitcoin hash rate data</h3>
+  <img src = "Data_Cleaning_Assets/bitcoin_hashrate_length.JPG"></img>
+  <p>Since the data has to be aligned to date, we decided to find the common intersection dates of the 2 datasets and combine them.</p>
+  
+  
+  ```
+  final_data = pd.merge(left = filteredDateBitcoin_data, left_on = "date", right = bitcoin_hashrate, right_on = "Date")
+  final_data.drop(columns = ["Date"])
+  final_data = final_data.rename(columns = {"Value": "Hashrate"})
+  final_data
+  ```
+  <p>Also, let's drop any possible Na values and combine the 2 datasets together.</p>
+  
+  
+  ```
+  filteredDateBitcoin_data.dropna()
+  ```
+  
+  
+  <p>Now, we can have a better look at the correlation between the important variables (decided under EDA).</p>
+  <img src = "Data_Cleaning_Assets/final_heatmap.png"></img>
+  
+  
+  
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 <section> 
   <h2> Analysis of Model Building </h2>
   <section>
