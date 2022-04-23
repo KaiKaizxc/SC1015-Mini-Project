@@ -185,7 +185,7 @@ The following have little to no correlation, or weaker correlation in general:
 <section>
   <h2 id = "Data-Cleaning">Data Cleaning</h2>
   <p>Inspecting the 
-
+</section>
 <section> 
   <h2> Analysis of Model Building </h2>
   <section>
