@@ -97,13 +97,13 @@
   <p>Exploratory Data Analysis will be split into the following:</p>
   <nav>
   <ol>
-    <li><a href = "#Gathering-Data">Relationship between all of the variables.</a></li>
-    <li><a href = "#Exploratory-Data-Analysis">Narrowing down relevant data</a></li>
+    <li><a href = "#relationship-data">Relationship between all of the variables.</a></li>
+    <li><a href = "#narrow-data">Narrowing down relevant data</a></li>
 
   </ol>
   </nav>
   
-  <h3>Relationship between all of the variables</h3>
+  <h3 id = "relationship-data">Relationship between all of the variables</h3>
   <p>Looking at all of the variables of the bitcoin data excluding hashrate in the first dataset:</p>
   <img src = "EDA_Assets/all_variables.JPG"></img>
   
@@ -121,11 +121,58 @@
 We have chosen these variables because these factors strongly reflect the sentiment of investors to Bitcoin intuitively
 </p>
 <h3>Bitcoin's price over the years</h3>
-  
-  
+<img src = "EDA_Assets/priceOverTime.png"></img>
 
+<h3>Bitcoin's active addresses count over the years</h3>
+<img src = "EDA_Assets/activeAddressOverTime.png"></img>
+ 
+<p>
+Very clearly, cryptocurrency is a rising trend because there is an increase in price due to the growth in demand, as shown by the absurd increases in activeWallet Addresses</p>
 
+<h3 id = "narrow-data">Narrowing down relevant data</h3>
+<p>Now, let's find out which data label we can use, that have a strong relationship with bitcoin's price</p>
+<p>
+Based on the definition of various labels, we suspect that the following should have a strong relationship with it's price: 
+<ul>
+    <li>Average Difficulty. If it is more difficult to get Bitcoin, it makes it more scarce right? Should have an direct relationship?</li>
+    <li>Hashrate. The more miners there are, the supply of Bitcoin increases, Hence, should reflect an inverse relationship?</li>
+    <li>BlockSize. The greater the number of transactions a block can store, the stronger Bitcoin is able to act as a payment method right?</li>
+    <li>Cumulative Number of Coins. The greater the supply, the lower the price should be. Yes?</li>
+</ul>
+</p>
 
+<p>Let's see the relationship between each variable so we can decide better which variable to use.</p>
+
+<h3>We have chosen to use a heapmap to better visualise so many variables at once</h3>
+<img src = "EDA_Assets/variablesHeatMap.png"></img>
+
+<p>Zooming down on the horizontal Price(USD) variable. Since we are interested in factors the price of Bitcoin is dependent upon. 
+The following have little to no correlation, or weaker correlation in general: 
+    <ul>
+        <li>blockCount</li>
+        <li>blockSize</li>
+        <li>MedianFee</li>
+        <li>MedianTxValue(USD)</li>
+        <li>generatedCoins</li>
+        <li>PaymentCount</li>
+        <li>Fees</li>
+    </ul>
+    Although Transaction Volume has a good correlation, Volume is not a reliable data because it can be faked. Because of various factors such as:
+    <ul>
+        <li>A trader colluding with an exchange</li>
+        <li>A trader colluding with another trader</li>
+        <li>The use of high-frequency trading algorithms</li>
+    </ul>
+    <p>Credits to:<nav><a href = "https://www.sofi.com/learn/content/what-is-volume-in-cryptocurrency/">https://www.sofi.com/learn/content/what-is-volume-in-cryptocurrency/</a></nav></p>
+    Thus, we have chosen to narrow down our scope to:
+    <ul>
+        <li>Average difficulty</li>
+        <li>Daily Hashrate</li>
+        <li>Cumulative Number of Coins</li>
+        <li>Active Addresses</li>
+    </ul>
+    <b>Now, let's move onto data cleaning!</b>
+</p>
 
 <section> 
   <h2> Analysis of Model Building </h2>
