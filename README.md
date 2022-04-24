@@ -223,7 +223,9 @@ The following have little to no correlation, or weaker correlation in general:
   <img src = "Data_Cleaning_Assets/priceAfterLog.png"></img>
   <p>Looking at the shape of the 2 graphs above, it is apparent that it is now less right skewed.</p>
   <p>Applying the same principle to other variables, we get the following result:</p>
-  
+  <img src = "Data_Cleaning_Assets/dataSkewCorrectedValues.JPG"></img>
+  <p>Notice that the skew value for almost every single variable improved except cumulative coins and activeAddresses. It may be because they are not very skewed to begin with, or not suitable for log transformation because log transformation is more suited for curves with right skews.</p>
+  <p>Hence, we will be using the new data for which the skew value improved, and the original activeAddress and cumulative coin datasets.</p>
   
   
 </section>
