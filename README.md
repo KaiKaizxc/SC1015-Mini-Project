@@ -95,7 +95,7 @@
 <!--   =============================== EXPLORATORY DATA ANALYSIS HERE ======================================= -->
   <h2 id = "Exploratory-Data-Analysis">Exploratory Data Analysis</h2>
   
-  <p>Exploratory Data Analysis will be split into the following:</p>
+  <p>Exploratory Data Analysis will be split into the following with a little mixed in later parts:</p>
   <nav>
   <ol>
     <li><a href = "#relationship-data">Relationship between all of the variables.</a></li>
