@@ -447,3 +447,22 @@ The following have little to no correlation, or weaker correlation in general:
    <p> The stigma around cryptocurrencies being volatile and valueless has led people to believe that it is an ‘inferior’ investment relative to fiat currency. Through our research and model building, it is abundantly clear to us that Bitcoin is an asset worth consideration. It is important to note that our analysis was focused on the mining scene of Bitcoin; there are many other factors that could indicate the growth in interest and success in Bitcoin. For instance, the adoption of payment in cryptocurrency by some organizations highlights how Bitcoin has evolved from being the center of tweets and memes, to being the fundamentally sound, massive giant that it is today. While our analysis was focused around Bitcoin, the insights to be gained remain largely the same for the various other types of cryptocurrencies.</p>
    <h2>Conclusion</h2>
    <p>All in all, our group has learned how to utilize various methods to obtain price prediction models for the price of Bitcoin. The price data that we were able to obtain allows us to confidently conclude that Bitcoin is an asset that is grounded in reality, and not just fueled by tweets and memes, like many other people might suggest. There is a real value and backing to Bitcoin, making it no less different from fiat currency or conventional stocks and bonds. Bitcoin is an asset that has a good system and strong fundamentals backing it up. As such, it is an asset that is worth investing in. </p>
+   
+ <h3>Contributions</h3>
+  <table>
+  <tr>
+      <th>Lin Kai</th>
+      <td>Exploratory Data Analysis, data cleaning, github readme, code tidiness and review.</td>
+  </tr>
+  <tr>
+      <th>Dhairya</th>
+      <td>Machine Learning Models</td>
+  </tr>
+  <tr>
+      <th>Yee Hao</th>
+      <td>Analysis and conclusion, closing thoughts, github readme. </td>
+  </tr>
+
+
+  </tr>
+  </table>
