@@ -221,7 +221,9 @@ The following have little to no correlation, or weaker correlation in general:
   <img src = "Data_Cleaning_Assets/priceBeforeLog.png"></img>
   <p>Distribution of Log(Price)</p>
   <img src = "Data_Cleaning_Assets/priceAfterLog.png"></img>
-  <p>Not surprisingly, the skew value dropped from 2.07 to 0.6 after log transformation. However, activeAddresses has a skew value of 0.45 which may not be suitable here. Explaining why the log transformation process worsened its skew of 0.45 to -0.64 instead.</p>
+  <p>Looking at the shape of the 2 graphs above, it is apparent that it is now less right skewed.</p>
+  <p>Applying the same principle to other variables, we get the following result:</p>
+  
   
   
 </section>
