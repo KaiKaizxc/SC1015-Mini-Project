@@ -5,6 +5,7 @@
   <section>
    <p> Hello! We are Lin Kai, Yee Hao and Dhairya from Nanyang Technological University. Our project will be on Bitcoin, inspired by the relatively new rise of blockchain technology. There is a general notion that investment in Bitcoin is a high risk affair, due to the volatile nature of cryptocurrency, as well as the fact that it is 'not backed by anything', unlike most currencies. Our group finds the world of mining to be a truly fascinating one. </p>
     
+   
    <img src = "Assets/Bitcoin.jpg" style = "width: 400px;"/>
    
    <h3>Problem Statement</h3>
