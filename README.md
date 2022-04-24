@@ -338,13 +338,65 @@ The following have little to no correlation, or weaker correlation in general:
 
    <p>Our group included code for if a singular Decision Tree was used for regression only as a comparison to the Random Forest model. Out of the multiple times that we ran the model, RMSE, MSE and MAE values were all generally lower in the Random Forest model, showing that the Random Forest process does help improve the accuracy of the model.</p>
     <h3>Machine Learning:K Nearest Neighbors(KNN)</h3>
-    <p>SImilar to Random Forest, KNN can also be used for both classification and regression. </p>
+    <p>SImilar to Random Forest, KNN can also be used for both classification and regression. KNN algorithm uses 'feature similarity' to predict the values of any new data points. New points are assigned a value based on how closely it resembles the points within the training set. To perform KNN model fitting, we require a heuristic to measure distances between points, as well as a K value to indicate how many neighbors to look at when deciding on what values to assign.</p>
+   <p>Below shows the code for our KNN algorithm:</p>
+    
+    ```
+    from sklearn.neighbors import KNeighborsRegressor
+    model = KNeighborsRegressor()
+    model.fit(train_scaled, y_train)
+
+    # Import mean_squared_error from sklearn
+    from sklearn.metrics import mean_squared_error
+    from sklearn.metrics import mean_absolute_error
+    from math import sqrt
+    
+    mse = mean_squared_error(y_train, model.predict(train_scaled))
+    mae = mean_absolute_error(y_train, model.predict(train_scaled))
+    print("mse = ",mse," & mae = ",mae," & rmse = ", sqrt(mse))
+
+    
+    test_mse = mean_squared_error(y_test, model.predict(test_scaled))
+    test_mae = mean_absolute_error(y_test, model.predict(test_scaled))
+    print("mse = ",test_mse," & mae = ",test_mae," & rmse = ", sqrt(test_mse))
+    ```
+    
+   <p>The selection of K values and heuristic is crucial in order to attain a accurate and reliable model. If K values are too low or high, we would obtain high rates of error in our predictions. The heuristic selected should be based on the variable type in qestion. In our case, all the independent variables are continuous numeric variables, thus either a Euclidian distance or a manhattan distance would be the most appropriate.</p>
     <h3>Machine Learning:Neural Networks</h3>
-    <p></p>
-    <h2>Analysis and Insights</h2>
-    <p>From our model building, we can see that the models we have built are all reliable at providing us a prediction of the price of Bitcoin. This can be seen from the relatively high R^2 value of our Linear Regression model of 0.75, as well as the relatively low MSE and MAE values of our Random Forest, KNN and Neural Network models. This indicates to us that, from our preliminary data analysis, the 4 independent variables that we selected were good candidates for our model building. This tells us that out of the 17 variables available to us in the data set, knowledge of only Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses and Daily Hash Rate will allow us to obtain a largely accurate prediction for the price of Bitcoin. It is important to note that each of the 4 models have their own pros and cons, and any one of the models can be better than the rest under the right circumstances. In our case, </p>
-    <p>Being able to obtain the price prediction of Bitcoin for a given set of data allows us to analyze a few things by comparing it to the actual price of Bitcoin. It helps us determine whether, based on our model’s prediction, if Bitcoin was over-valued, or under-valued at any given point in time. If the predicted price exceeds the actual price of Bitcoin for a given time, it could be seen as an indication that it is a good time to purchase Bitcoin, as it is currently under-valued. Additionally, if our price prediction is observed to be consistently and noticeable lower or higher than the actual price, we can conclude that, while mining activity affects the price of Bitcoin, there are other external influences that can affect Bitcoin pricing to a much larger extent, such as tweets from famous personalities like Elon Musk, who has enough influence to significantly impact market demand. </p>
-    <p>All of our models pointed us to the conclusion that mining activity does have a profound impact on the price of Bitcoin. Generally, as mining activity increases, the price of Bitcoin rises along with it. This is because difficulty in mining rises as the mining space becomes more saturated. With the need for more sophisticated, higher cost computer components to remain competitive within the mining space, it naturally leads to an increase in Bitcoin price. Increasing Bitcoin prices would lead to rising interest in mining, highlighting greater trust and belief of the profitability of Bitcoin. If this trajectory continues for Bitcoin, the success of Bitcoin will only continue to grow for many more years to come.</p>
-    <p> The stigma around cryptocurrencies being volatile and valueless has led people to believe that it is an ‘inferior’ investment relative to fiat currency. Through our research and model building, it is abundantly clear to us that Bitcoin is an asset worth consideration. It is important to note that our analysis was focused on the mining scene of Bitcoin; there are many other factors that could indicate the growth in interest and success in Bitcoin. For instance, the adoption of payment in cryptocurrency by some organizations highlights how Bitcoin has evolved from being the center of tweets and memes, to being the fundamentally sound, massive giant that it is today. While our analysis was focused around Bitcoin, the insights to be gained remain largely the same for the various other types of cryptocurrencies.</p>
-    <h2>Conclusion</h2>
-    <p>All in all, our group has learned how to utilize various methods to obtain price prediction models for the price of Bitcoin. The price data that we were able to obtain allows us to confidently conclude that Bitcoin is an asset that is grounded in reality, and not just fueled by tweets and memes, like many other people might suggest. There is a real value and backing to Bitcoin, making it no less different from fiat currency or conventional stocks and bonds. Bitcoin is an asset that has a good system and strong fundamentals backing it up. As such, it is an asset that is worth investing in.</p>
+    <p>Lastly, we move on to Neural Networks. We chose a Multilayer Perceptron(MLP) Neural Network model for our model building. MLPs are a fully connected class of feedforward artificial neural network, and consists of at least three layers of nodes: an input layer, a hidden layer and an output layer.</p>
+   <p>Below shows the code for our Neural Network model:</p>
+    
+    ```
+    from sklearn.neural_network import MLPRegressor
+    model = MLPRegressor()
+    model.fit(train_scaled, y_train)
+    
+    # Import mean_squared_error from sklearn
+    from sklearn.metrics import mean_squared_error
+    from sklearn.metrics import mean_absolute_error
+    from math import sqrt
+    
+    nn_train_mse = mean_squared_error(y_train, model.predict(train_scaled))
+    nn_train_mae = mean_absolute_error(y_train, model.predict(train_scaled))
+    print(nn_train_mse)
+    print(sqrt(nn_train_mse))
+    print(nn_train_mae)
+    
+    nn_test_mse = mean_squared_error(y_test, model.predict(test_scaled))
+    nn_test_mae = mean_absolute_error(y_test, model.predict(test_scaled))
+    print(nn_test_mse)
+    print(sqrt(nn_test_mse))
+    print(nn_test_mae)
+    ```
+    
+   <p>Our group decided to build a Neural Network as we
+
+   <h2>Analysis and Insights</h2>
+   <p>From our model building, we can see that the models we have built are all reliable at providing us a prediction of the price of Bitcoin. This can be seen from the relatively high R^2 value of our Linear Regression model of 0.75, as well as the relatively low MSE and MAE values of our Random Forest, KNN and Neural Network models. This indicates to us that, from our preliminary data analysis, the 4 independent variables that we selected were good candidates for our model building. This tells us that out of the 17 variables available to us in the data set, knowledge of only Average Difficulty, Cumulative Total Number of Coins, Number of Active Addresses and Daily Hash Rate will allow us to obtain a largely accurate prediction for the price of Bitcoin. It is important to note that each of the 4 models have their own pros and cons, and any one of the models can be better than the rest under the right circumstances.</p>
+    
+    
+   <p>Being able to obtain the price prediction of Bitcoin for a given set of data allows us to analyze a few things by comparing it to the actual price of Bitcoin. It helps us determine whether, based on our model’s prediction, if Bitcoin was over-valued, or under-valued at any given point in time. If the predicted price exceeds the actual price of Bitcoin for a given time, it could be seen as an indication that it is a good time to purchase Bitcoin, as it is currently under-valued. Additionally, if our price prediction is observed to be consistently and noticeable lower or higher than the actual price, we can conclude that, while mining activity affects the price of Bitcoin, there are other external influences that can affect Bitcoin pricing to a much larger extent, such as tweets from famous personalities like Elon Musk, who has enough influence to significantly impact market demand. </p>
+   <p>All of our models pointed us to the conclusion that mining activity does have a profound impact on the price of Bitcoin. Generally, as mining activity increases, the price of Bitcoin rises along with it. This is because difficulty in mining rises as the mining space becomes more saturated. With the need for more sophisticated, higher cost computer components to remain competitive within the mining space, it naturally leads to an increase in Bitcoin price. Increasing Bitcoin prices would lead to rising interest in mining, highlighting greater trust and belief of the profitability of Bitcoin. If this trajectory continues for Bitcoin, the success of Bitcoin will only continue to grow for many more years to come.</p>
+   <p> The stigma around cryptocurrencies being volatile and valueless has led people to believe that it is an ‘inferior’ investment relative to fiat currency. Through our research and model building, it is abundantly clear to us that Bitcoin is an asset worth consideration. It is important to note that our analysis was focused on the mining scene of Bitcoin; there are many other factors that could indicate the growth in interest and success in Bitcoin. For instance, the adoption of payment in cryptocurrency by some organizations highlights how Bitcoin has evolved from being the center of tweets and memes, to being the fundamentally sound, massive giant that it is today. While our analysis was focused around Bitcoin, the insights to be gained remain largely the same for the various other types of cryptocurrencies.</p>
+   <h2>Conclusion</h2>
+   <p>All in all, our group has learned how to utilize various methods to obtain price prediction models for the price of Bitcoin. The price data that we were able to obtain allows us to confidently conclude that Bitcoin is an asset that is grounded in reality, and not just fueled by tweets and memes, like many other people might suggest. There is a real value and backing to Bitcoin, making it no less different from fiat currency or conventional stocks and bonds. Bitcoin is an asset that has a good system and strong fundamentals backing it up. As such, it is an asset that is worth investing in. </p>
