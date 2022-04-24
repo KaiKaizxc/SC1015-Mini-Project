@@ -211,8 +211,16 @@ The following have little to no correlation, or weaker correlation in general:
   <p>Now, we can have a better look at the correlation between the important variables (decided under EDA).</p>
   <img src = "Data_Cleaning_Assets/final_heatmap.png"></img>
   
-  <h3>Reducing skew of the important variables</h3>
-  <p>Looking at the skew values of our dataset,</p>
+  <h3>Data preparation (Please refer to 3. Data Preparation file)</h3>
+  <p>Looking at the skew values of our dataset:</p>
+  <img src = "Data_Cleaning_Assets/dataSkewValues.JPG"></img>
+  <p>Most of our data has quite high skew values of 2+, with it being mostly right-skewed. Thus, we decided to use logarithm transformation to reduce the skewness of our data.</p>
+  <p>The price of Bitcoin distribution:</p>
+  <img src = "Data_Cleaning_Assets/priceBeforeLog.png"></img>
+  <p>Distribution of Log(Price)</p>
+  <img src = "Data_Cleaning_Assets/priceAfterLog.png"></img>
+  <p>Not surprisingly, the skew value dropped from 2.07 to 0.6 after log transformation. However, activeAddresses has a skew value of 0.45 which may not be suitable here. Explaining why the log transformation process worsened its skew of 0.45 to -0.64 instead.</p>
+  
   
 </section>
 
