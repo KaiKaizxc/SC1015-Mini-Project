@@ -211,7 +211,8 @@ The following have little to no correlation, or weaker correlation in general:
   <p>Now, we can have a better look at the correlation between the important variables (decided under EDA).</p>
   <img src = "Data_Cleaning_Assets/final_heatmap.png"></img>
   
-  
+  <h3>Reducing skew of the important variables</h3>
+  <p>Looking at the skew values of our dataset,</p>
   
 </section>
 
