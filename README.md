@@ -61,6 +61,7 @@
       <li><a href = "#Gathering-Data">Gathering Data</a></li>
       <li><a href = "#Exploratory-Data-Analysis">Exploratory Data Analysis</a></li>
       <li><a href = "#Data-Cleaning">Data Cleaning</a></li>
+      <li><a href = "#Model-Analysis">Machine Learning</a></li>
       <li><a href = "#Model-Analysis">Analysis of Model Building</a></li>
       <li><a href = "#Final-Thoughts">Final Thoughts and Insights</a></li>
     </ol>
