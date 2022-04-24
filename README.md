@@ -398,7 +398,7 @@ The following have little to no correlation, or weaker correlation in general:
     ```
     
    <p>Our group decided to build a Neural Network as our original data was very skewed. Since Linear Regression does not perform as well with skewed data, Neural Networks are able to help us obtain a more accurate model. Moreover, since we are unable to ascertain whether our variables have linear relationships with one another, it is better to use a Neural Network model, as it will be able to deal with both linear and non-linear relationships. Most importantly, because Bitcoin data is relatively new, there is no well-known statistical method to help us analyze the relationships between variables accurately. Neural Networks help us to do so, and the processes are embedded within the hidden layers, such that users do not need to understand the extremely complicated process behind it. We are able to use the outputs and focus on performing our analysis instead.</p>
-   <h2>Analysis and Insights</h2>
+   <h2>Analysis of Model Building</h2>
    <p>To validate the accuracy of our models, we decided to make a plot of our predicted price against the actual price for each of our models. Since Linear Regression is our baseline, we will be comparing the 3 other models against Linear Regression. Visually, graphs that have a line of best fit covering a large portion of data points from the scatter plot are more accurate models than others.</p>
     <h4>Decision Tree and Random Forest against Linear Regression:</h4>
     <img src = "Analysis_Assets/DT_vs_RF_LinReg.png" style = "width: 400px;"/>
@@ -408,7 +408,29 @@ The following have little to no correlation, or weaker correlation in general:
     <img src = "Analysis_Assets/NN_vs_LinReg.png" style = "width: 400px;"/>
     <p>As we can see, Random Forest, KNN and Neural Networks all provided a more accurate prediction model when compared to Linear Regression. In particular however, our Random Forest model allowed us to obtain a essentially perfectly-fitted model, as seen from its model data vs actual data graph. This is because Random Forest is a simpler model to build, given that it requires much less data preprocessing and has a much simpler data training process. Ultimately, it is interesting to observe how the same dataset can be interpreted and trained in extremely different ways when building different models, giving rise to a wide range of accuracies in the models. Each of the models we have used have their own pros and cons, and any one of the models can be better than the rest under the right circumstances.</p>
     <h4>Cross-Validated Grid Search(CV Grid Search)</h4>
-   <p>We should also note that the performance of our Random Forest, KNN and Neural Network models can be improved by implementing CV Grid Search. This process tunes hyperparameters in order to achieve maximum optimtization. The algorithm determines the best combination of parameters based on a scoring metric of our choosing. These hyperparameters are the ideal combination of variables that will give our models the best performance. CV Grid search would have helped our Neural Network and KNN model accuracy, as both of them still have a wide spread of data points around the best-fit line.</p>
+   <p>We should also note that the performance of our Random Forest, KNN and Neural Network models can be improved by implementing CV Grid Search. This process tunes hyperparameters in order to achieve maximum optimtization. The algorithm determines the best combination of parameters based on a scoring metric of our choosing. These hyperparameters are the ideal combination of variables that will give our models the best performance. CV Grid search would have helped our Neural Network and KNN model accuracy, as both of them still have a wide spread of data points around the best-fit line. For illustration, below shows the code for CV Grid Search on our KNN model:</p>
+    
+    ```
+    from sklearn.model_selection import GridSearchCV
+    # define the parameter values that should be searched
+    # for python 2, k_range = range(1, 31)
+    k_range = list(range(1, 31))
+    print(k_range)
+    # create a parameter grid: map the parameter names to the values that should be searched
+    # simply a python dictionary
+    # key: parameter name
+    # value: list of values that should be searched for that parameter
+    # single key-value pair for param_grid
+    param_grid = dict(n_neighbors=k_range)
+    print(param_grid)
+    # instantiate the grid
+    grid = GridSearchCV(KNeighborsRegressor, param_grid, cv=10, scoring='accuracy')
+    
+    grid = GridSearchCV(model, param_grid, n_jobs= -1, cv=5)
+    grid.fit(train_scaled, y_train)
+    print(grid.best_params_) 
+    ```
+   <h3>Final Thoughts and Insights</h3>
    <p>Being able to obtain the price prediction of Bitcoin for a given set of data allows us to analyze a few things by comparing it to the actual price of Bitcoin. It helps us determine whether, based on our model’s prediction, if Bitcoin was over-valued, or under-valued at any given point in time. If the predicted price exceeds the actual price of Bitcoin for a given time, it could be seen as an indication that it is a good time to purchase Bitcoin, as it is currently under-valued. Additionally, if our price prediction is observed to be consistently and noticeable lower or higher than the actual price, we can conclude that, while mining activity affects the price of Bitcoin, there are other external influences that can affect Bitcoin pricing to a much larger extent, such as tweets from famous personalities like Elon Musk, who has enough influence to significantly impact market demand. </p>
    <p>All of our models pointed us to the conclusion that mining activity does have a profound impact on the price of Bitcoin. Generally, as mining activity increases, the price of Bitcoin rises along with it. This is because difficulty in mining rises as the mining space becomes more saturated. With the need for more sophisticated, higher cost computer components to remain competitive within the mining space, it naturally leads to an increase in Bitcoin price. Increasing Bitcoin prices would lead to rising interest in mining, highlighting greater trust and belief of the profitability of Bitcoin. If this trajectory continues for Bitcoin, the success of Bitcoin will only continue to grow for many more years to come.</p>
    <p> The stigma around cryptocurrencies being volatile and valueless has led people to believe that it is an ‘inferior’ investment relative to fiat currency. Through our research and model building, it is abundantly clear to us that Bitcoin is an asset worth consideration. It is important to note that our analysis was focused on the mining scene of Bitcoin; there are many other factors that could indicate the growth in interest and success in Bitcoin. For instance, the adoption of payment in cryptocurrency by some organizations highlights how Bitcoin has evolved from being the center of tweets and memes, to being the fundamentally sound, massive giant that it is today. While our analysis was focused around Bitcoin, the insights to be gained remain largely the same for the various other types of cryptocurrencies.</p>
