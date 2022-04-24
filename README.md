@@ -61,6 +61,8 @@
       <li><a href = "#Gathering-Data">Gathering Data</a></li>
       <li><a href = "#Exploratory-Data-Analysis">Exploratory Data Analysis</a></li>
       <li><a href = "#Data-Cleaning">Data Cleaning</a></li>
+      <li><a href = "#Model-Analysis">Analysis of Model Building</a></li>
+      <li><a href = "#Final-Thoughts">Final Thoughts and Insights</a></li>
     </ol>
     </nav>
   </section>
@@ -236,7 +238,7 @@ The following have little to no correlation, or weaker correlation in general:
 
 
 <section> 
-  <h2> Analysis of Model Building </h2>
+  <h2 id = "Model-Analysis"> Analysis of Model Building </h2>
   <section>
     <p> The 4 types of Machine Learning models that we have decided to build are as follows:
       <p>
@@ -434,7 +436,7 @@ The following have little to no correlation, or weaker correlation in general:
     grid.fit(train_scaled, y_train)
     print(grid.best_params_) 
     ```
-   <h3>Final Thoughts and Insights</h3>
+   <h3 id = "Final-Thoughts">Final Thoughts and Insights</h3>
    <p>Being able to obtain the price prediction of Bitcoin for a given set of data allows us to analyze a few things by comparing it to the actual price of Bitcoin. It helps us determine whether, based on our model’s prediction, if Bitcoin was over-valued, or under-valued at any given point in time. If the predicted price exceeds the actual price of Bitcoin for a given time, it could be seen as an indication that it is a good time to purchase Bitcoin, as it is currently under-valued. Additionally, if our price prediction is observed to be consistently and noticeable lower or higher than the actual price, we can conclude that, while mining activity affects the price of Bitcoin, there are other external influences that can affect Bitcoin pricing to a much larger extent, such as tweets from famous personalities like Elon Musk, who has enough influence to significantly impact market demand. </p>
    <p>All of our models pointed us to the conclusion that mining activity does have a profound impact on the price of Bitcoin. Generally, as mining activity increases, the price of Bitcoin rises along with it. This is because difficulty in mining rises as the mining space becomes more saturated. With the need for more sophisticated, higher cost computer components to remain competitive within the mining space, it naturally leads to an increase in Bitcoin price. Increasing Bitcoin prices would lead to rising interest in mining, highlighting greater trust and belief of the profitability of Bitcoin. If this trajectory continues for Bitcoin, the success of Bitcoin will only continue to grow for many more years to come.</p>
    <p> The stigma around cryptocurrencies being volatile and valueless has led people to believe that it is an ‘inferior’ investment relative to fiat currency. Through our research and model building, it is abundantly clear to us that Bitcoin is an asset worth consideration. It is important to note that our analysis was focused on the mining scene of Bitcoin; there are many other factors that could indicate the growth in interest and success in Bitcoin. For instance, the adoption of payment in cryptocurrency by some organizations highlights how Bitcoin has evolved from being the center of tweets and memes, to being the fundamentally sound, massive giant that it is today. While our analysis was focused around Bitcoin, the insights to be gained remain largely the same for the various other types of cryptocurrencies.</p>
