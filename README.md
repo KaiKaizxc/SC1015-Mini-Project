@@ -75,14 +75,14 @@
   <p>Bitcoin general data taken from:</p>
   <nav>
     <ul>
-      <li><a href = "">*insert link here*</a></li>
+      <li><a href = "https://www.kaggle.com/datasets/amritpal333/crypto-mining-data">https://www.kaggle.com/datasets/amritpal333/crypto-mining-data</a></li>
     </ul>
   </nav>
   
   <p>Bitcoin hash rate data taken from:</p>
   <nav>
     <ul>
-      <li><a href = "">*insert link here*</a></li>
+      <li><a href = "https://data.nasdaq.com/data/BCHAIN/HRATE-bitcoin-hash-rate">https://data.nasdaq.com/data/BCHAIN/HRATE-bitcoin-hash-rate</a></li>
     </ul>
   </nav>
   
