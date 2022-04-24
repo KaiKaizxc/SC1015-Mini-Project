@@ -61,7 +61,7 @@
       <li><a href = "#Gathering-Data">Gathering Data</a></li>
       <li><a href = "#Exploratory-Data-Analysis">Exploratory Data Analysis</a></li>
       <li><a href = "#Data-Cleaning">Data Cleaning</a></li>
-      <li><a href = "#Model-Analysis">Machine Learning</a></li>
+      <li><a href = "#Machine-Learning">Machine Learning</a></li>
       <li><a href = "#Model-Analysis">Analysis of Model Building</a></li>
       <li><a href = "#Final-Thoughts">Final Thoughts and Insights</a></li>
     </ol>
@@ -232,7 +232,35 @@ The following have little to no correlation, or weaker correlation in general:
 </section>
 
 
+<section>
+  <h2 id = "Machine-Learning">Machine Learning</h2>
+  <h3>Feature Scaling</h3>
+  <p>Feature scaling is a method used to normalize the range of independent variables or features of data. In data processing, it is also known as data normalization and is generally performed during the data preprocessing step.
+Since the range of values of raw data varies widely, in some machine learning algorithms, objective functions will not work properly without normalization. For example, many classifiers calculate the distance between two points by the Euclidean distance. If one of the features has a broad range of values, the distance will be governed by this particular feature. Therefore, the range of all features should be normalized so that each feature contributes approximately proportionately to the final distance.
+For our dataset all features are numeric so we do not need to worry about converting categorical data with techniques such as one-hot encoding. However, we will demonstrate how to standardize our data. We standardize the features by removing the mean and scaling to unit variance. Although this process assumes a distribution similar to a gaussian one, the step we had already done while correcting the skewness.</p>
+  
+  <h3>K-Nearest Neighbours</h3>
+  <p>KNN algorithm can be used for both classification and regression problems. The KNN algorithm uses ‘feature similarity’ to predict the values of any new data points. This means that the new point is assigned a value based on how closely it resembles the points in the training set. The first step is to calculate the distance between the new point and each training point. There are various methods for calculating this distance, of which the most commonly known methods are – Euclidian, Manhattan (for continuous) and Hamming distance (for categorical).
+ 
+<li>Euclidean Distance: Euclidean distance is calculated as the square root of the sum of the squared differences between a new point (x) and an existing point (y).</li>
+    
+<li>Manhattan Distance: This is the distance between real vectors using the sum of their absolute difference.</li>
+<p>
+The second step is to select the k value. This determines the number of neighbors we look at when we assign a value to any new observation.
+</p>
+  
+  
+  
+  
+<p>For a very low value of k (suppose k=1), the model overfits on the training data, which leads to a high error rate on the validation set. On the other hand, for a high value of k, the model performs poorly on both train and validation set. If you observe closely, the validation error curve reaches a minimum at a value of k = 9. This value of k is the optimum value of the model (it will vary for different datasets). This curve is known as an ‘elbow curve‘ (because it has a shape like an elbow) and is usually used to determine the k value.
+KNN works by finding the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label (in the case of classification) or averages the labels (in the case of regression).
+</p>
+  
+  
 
+   
+
+  
 
 
 
