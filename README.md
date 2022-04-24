@@ -346,6 +346,7 @@ The following have little to no correlation, or weaker correlation in general:
     print("Random Forest test mse = ",rf_test_mse," & mae = ",rf_test_mae," & rmse = ", sqrt(rf_test_mse))
     ```
 
+  <img src = "Analysis_Assets/RF_Accuracy.PNG"></img>
    <p>Our group included code for if a singular Decision Tree was used for regression only as a comparison to the Random Forest model. Out of the multiple times that we ran the model, RMSE, MSE and MAE values were all generally lower in the Random Forest model, showing that the Random Forest process does help improve the accuracy of the model.</p>
     <h3>Machine Learning:K Nearest Neighbors(KNN)</h3>
     <p>SImilar to Random Forest, KNN can also be used for both classification and regression. KNN algorithm uses 'feature similarity' to predict the values of any new data points. New points are assigned a value based on how closely it resembles the points within the training set. To perform KNN model fitting, we require a heuristic to measure distances between points, as well as a K value to indicate how many neighbors to look at when deciding on what values to assign.</p>
@@ -371,7 +372,8 @@ The following have little to no correlation, or weaker correlation in general:
     print("mse = ",test_mse," & mae = ",test_mae," & rmse = ", sqrt(test_mse))
     ```
     
-   <p>The selection of K values and heuristic is crucial in order to attain a accurate and reliable model. If K values are too low or high, we would obtain high rates of error in our predictions. The heuristic selected should be based on the variable type in qestion. In our case, all the independent variables are continuous numeric variables, thus either a Euclidian distance or a manhattan distance would be the most appropriate.</p>
+   <img src = "Analysis_Assets/KNN_Accuracy.PNG"></img>
+   <p>We see that our KNN model has low MSE,MAE and RMSE values, indicating good accuracy of the prediction model. The selection of K values and heuristic is crucial in order to attain a accurate and reliable model. If K values are too low or high, we would obtain high rates of error in our predictions. The heuristic selected should be based on the variable type in qestion. In our case, all the independent variables are continuous numeric variables, thus either a Euclidian distance or a manhattan distance would be the most appropriate.</p>
     <h3>Machine Learning:Neural Networks</h3>
     <p>Lastly, we move on to Neural Networks. We chose a Multilayer Perceptron(MLP) Neural Network model for our model building. MLPs are a fully connected class of feedforward artificial neural network, and consists of at least three layers of nodes: an input layer, a hidden layer and an output layer.</p>
    <p>Below shows the code for our Neural Network model:</p>
