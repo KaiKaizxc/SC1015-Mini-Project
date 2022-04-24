@@ -248,7 +248,7 @@ For our dataset all features are numeric so we do not need to worry about conver
 <p>
 The second step is to select the k value. This determines the number of neighbors we look at when we assign a value to any new observation.
 </p>
-  
+<img src = "Assets/KNN.JPG"></img>
   
   
   
@@ -256,7 +256,16 @@ The second step is to select the k value. This determines the number of neighbor
 KNN works by finding the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label (in the case of classification) or averages the labels (in the case of regression).
 </p>
   
-  
+<h3>Neural Networks</h3>
+<p>The type of neural network model used in our model is called a multilayer perceptron (MLP). A multilayer perceptron (MLP)  is a fully connected class of feedforward artificial neural network (ANN).An MLP consists of at least three layers of nodes: an input layer, a hidden layer and an output layer</p>
+
+<h3>CV Grid search</h3>
+<p>
+  This is a model that is used for tuning the hyper parameters of many different types of models in order to achieve maximum optimization. We have used this model with Random forests, K nearest neighbors and neural networks in order to find the best values of the parameters for the most accurate prediction of price value. It runs through all the different parameters that is fed into the parameter grid and produces the best combination of parameters, based on a scoring metric of your choice. The “best” parameters that GridSearchCV identifies are technically the best that could be produced, but only by the parameters that you included in your parameter grid.
+Grid Search will then run a range for the hyperparameters. The definition provided by the official Sci-Kit learn website is "The parameters of the estimator used to apply these methods are optimized by cross-validated grid-search over a parameter grid." Cross-validation is defined as "Cross-validation is a statistical method used to estimate the performance (or accuracy) of machine learning models."
+
+For example in the case of random forest the optimized score is the average of the cross-validated score of the best hyperparameters. Since cv = 5, the train and test split will occur five times for each hyperparameter. The best score is calculated for each trial and each combination of hyperparameters. The best score will return the average of the best hyperparameter combination in those 5 tries. The function returns max depth and n_estimatiors in the case of random forests. For k nearest neighbors it is used to predict  the number of neighbors and for neural it predicts many parameters like 
+</p>
 
    
 
